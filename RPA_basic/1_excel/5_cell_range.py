@@ -44,7 +44,10 @@ for i in range(1, 11):
 # for column in tuple(ws.columns):
 #     print(column[0].value)
 
-for row in ws.iter_rows(min_row=1, max_row=5):
-    print(row[2].value)
+# for row in ws.iter_rows(min_row=1, max_row=5):
+#     print(row[2].value)
+
+for col in ws.iter_cols(min_row=1, max_row=5, min_col=1, max_col=3):
+    print(col)
 
 wb.save("sample.xlsx")
